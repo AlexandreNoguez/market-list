@@ -24,6 +24,7 @@ import {
 import { useState } from "react";
 import { APP_NAME } from "../../shared/config";
 import { usePreferencesStore } from "../stores/preferencesStore";
+import { InstallAppButton } from "./InstallAppButton";
 
 interface AppHeaderProps {
   total: number;
@@ -121,6 +122,7 @@ export function AppHeader({
             </Box>
           </Stack>
 
+          <InstallAppButton />
           <Tooltip title={mode === "light" ? "Ativar modo escuro" : "Ativar modo claro"}>
             <IconButton onClick={toggleMode} aria-label="Alternar tema" size="small">
               {mode === "light" ? <DarkModeRounded /> : <LightModeRounded />}
